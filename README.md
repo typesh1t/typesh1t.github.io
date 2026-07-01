@@ -1,4 +1,4 @@
-# luoxiaoqi.github.io
+# typesh1t.github.io
 
 Personal academic website of **罗骁齐 (Xiaoqi Luo)**, built with the
 [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme. Tailored for
@@ -60,12 +60,12 @@ with Jekyll and publishes `_site` to the `gh-pages` branch.
 
 One-time GitHub setup:
 
-1. Create a repo named **`luoxiaoqi.github.io`** (must match your GitHub
+1. Create a repo named **`typesh1t.github.io`** (must match your GitHub
    username) and push this code to `main`.
 2. Repo **Settings → Pages → Build and deployment → Source: Deploy from a
    branch → Branch: `gh-pages` / `/ (root)`**.
 3. After the first Actions run finishes, the site is live at
-   <https://luoxiaoqi.github.io>.
+   <https://typesh1t.github.io>.
 
 ## License
 
