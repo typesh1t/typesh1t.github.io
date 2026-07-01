@@ -1,0 +1,162 @@
+cv:
+  name: Xiaoqi Luo
+  label: Robotics & Brain-Computer Interface Researcher
+  email: 2496998324@qq.com
+  location: Hangzhou, China
+  image: ""
+  summary: >
+    Master's student in Control Engineering at Hangzhou Dianzi University, working on
+    multimodal time-series signal modeling and decoding (EEG-fNIRS). Two first-author
+    papers published in Q1 TOP journals (Applied Soft Computing; IEEE Transactions on
+    Affective Computing). Internship experience in vision-language-action (VLA) models,
+    embodied robot learning, and invasive brain-computer interface speech decoding.
+    Actively seeking PhD opportunities and full-time research roles.
+
+  social_networks:
+    - network: GitHub
+      username: luoxiaoqi
+    - network: Email
+      username: 2496998324@qq.com
+
+  address:
+    street: ""
+    city: Hangzhou
+    region: Zhejiang
+    postalCode: ""
+    countryCode: CN
+
+  sections:
+    Education:
+      - institution: Hangzhou Dianzi University
+        location: Hangzhou, China
+        url: https://www.hdu.edu.cn/
+        area: Control Engineering
+        studyType: M.Eng.
+        start_date: 2024-09
+        end_date: present
+        score: "GPA: 3.7/4.0"
+        courses: "Multimodal Time-Series Signal Modeling & Decoding"
+        highlights:
+          - Research focus on multimodal EEG-fNIRS decoding.
+          - Two first-author papers published/accepted in Q1 TOP journals — Applied Soft Computing (IF≈6.6) and IEEE Transactions on Affective Computing (IF≈9.8).
+
+      - institution: East China Jiaotong University
+        location: Nanchang, China
+        url: https://www.ecjtu.edu.cn/
+        area: Automation
+        studyType: B.Eng.
+        start_date: 2020-09
+        end_date: 2024-06
+        score: "GPA: 4.0/5.0 (top 30%)"
+        highlights:
+          - Received multiple academic scholarships.
+
+    Experience:
+      - company: Pudu Robotics
+        position: VLA Algorithm Intern
+        location: Shenzhen, China
+        start_date: 2026-03
+        end_date: 2026-06
+        summary: Worked on vision-language-action foundation models for a self-developed wheeled dual-arm robot, covering reproduction & adaptation, evaluation, inference acceleration, and reinforcement-learning post-training.
+        highlights:
+          - "Model reproduction & embodiment adaptation: reproduced GR00T-N1 and DM0, performed SFT on box-moving and production-task data for a self-developed wheeled dual-arm body, adapted action representation and inference config, and documented training pitfalls with effect attribution."
+          - "RoboChallenge evaluation for in-house foundation model: built the official RoboChallenge eval pipeline, deployed an HTTP inference service + ClientAPI, local mock closed-loop, and a 20-dim model-action to Franka control-interface action mapping; fine-tuned on Table 30 tasks."
+          - "Inference acceleration: following Realtime-VLA, optimized end-to-end online inference with CUDA Graph to remove CPU scheduling overhead, client-side pre-resize, image codec WebP95→JPEG90, and WebSocket→ZMQ communication, cutting per-step latency by ~50ms."
+          - "RL post-training: applied ConRFT reinforcement-learning fine-tuning on FlowerVLA SFT weights; designed a human-in-the-loop (SFT→offline RL→online RL) pipeline combining BC and Q-learning dual loss, human intervention and sparse rewards, built a reward model and real-robot rollout eval loop, substantially improving grasp/push success and error recovery."
+
+      - company: Anker Innovations
+        position: Embodied Closed-Loop Algorithm Intern
+        location: Shenzhen, China
+        start_date: 2025-10
+        end_date: 2026-03
+        summary: Developed VLA model deployment, multimodal robot-data pipelines, teleoperation data collection, and VLM auto-labeling toolchains for quadruped and manipulator platforms.
+        highlights:
+          - "VLA reproduction & validation: reproduced ACT, pi0.5, and Diffusion Policy, completed end-to-end Franka block-insertion validation; deployed InternVLA-N1 in a client/server split on Unitree Go2 — RTX 4090 ran an HTTP inference server while Jetson Orin ran D435i capture + ROS2/UDP control bridge, streaming trajectories over LAN HTTP for language-guided navigation."
+          - "Quadruped multimodal data pipeline: built an 8-sensor spatiotemporal alignment chain — 3-LiDAR extrinsic calibration, coordinate transforms and point-cloud fusion, plus 5 fisheye-camera calibration & undistortion; deployed MCAP slicing/unpacking/alignment services on Kubernetes with task-queue async scheduling, processing tens of TB of raw robot data."
+          - "Manipulator data collection: built UMI + teleop collection pipelines covering LAN networking, NTP clock sync, station ingest, rerun playback, multimodal alignment, and WebDataset/lerobot format conversion; surveyed data-quality eval literature and industry methods, then designed a 5-dimension on-device quality rule check plus a cloud data-lake scoring algorithm."
+          - "VLM auto-labeling & toolchain: built a Qwen-VL + GroundingDINO video-understanding data-production line for scene description, object grounding and region annotation; via vLLM high-concurrency inference, multi-machine parallelism and queue load balancing, lifted end-to-end throughput by ~30%."
+
+      - company: Westlake University, CenBRAIN Lab
+        position: Algorithm Engineer Intern
+        location: Hangzhou, China
+        start_date: 2025-06
+        end_date: 2025-09
+        summary: Worked on invasive brain-computer interface (iBCI) speech decoding, building sEEG data pipelines and an acoustic-inspired hierarchical Chinese decoding architecture.
+        highlights:
+          - "Built the clinical sEEG data acquisition & preprocessing pipeline: low-pass filtering, power-line notch, down-sampling, channel selection and differential referencing; used MFA, pyPinyin and IPA mapping to generate word-level time boundaries and initial/tone/final labels."
+          - "Designed an acoustic-inspired hierarchical decoding architecture: a shared 1D-CNN/RNN temporal backbone encodes C×T sEEG segments, with three parallel Initial/Tone/Final decoders; recovered sentence-level Chinese output via Beam Search, pinyin-to-char mapping and LLM re-ranking."
+
+    Projects:
+      - name: Crude-Oil Market Data & Intelligent Investment-Research Platform
+        summary: A backend data and AI quant-strategy platform for Ningbo Bohui Chemical, covering multi-asset market data, low-latency streaming, DAG-based strategy orchestration, and an offloaded compute architecture.
+        highlights:
+          - "AI quant strategy workbench: used Codex and Claude Code to design the workbench, built a strategy-factor Workflow with DAG visual orchestration, ingested real-time exchange quotes, and constructed a CTP→Kafka→ClickHouse low-latency streaming path."
+          - "Multi-asset market & backtest data pipeline: integrated FMP, TradingView, PostgreSQL hot DB, OSS historical archive and real-time indicator services across futures, US equities and A-shares; designed a main-site + Mac worker + OSS architecture that decoupled compute from the main pipeline."
+        start_date: 2025-10
+        end_date: 2026-04
+
+    Awards:
+      - title: First-author paper in IEEE Transactions on Affective Computing
+        authors:
+          - "Xiaoqi Luo"
+        date: 2025-01-01
+        awarder: IEEE
+        url: # TODO: add DOI / paper URL
+        summary: SCI / JCR Q1 TOP journal, Impact Factor ≈ 9.8. First-author EEG-fNIRS multimodal decoding work.
+
+      - title: First-author paper in Applied Soft Computing
+        authors:
+          - "Xiaoqi Luo"
+        date: 2024-09-01
+        awarder: Elsevier
+        url: # TODO: add DOI / paper URL
+        summary: SCI / JCR Q1 TOP journal, Impact Factor ≈ 6.6. First-author EEG-fNIRS multimodal decoding work.
+
+      - title: Academic Scholarships
+        authors:
+          - "East China Jiaotong University"
+        date: 2020-09-01
+        awarder: East China Jiaotong University
+        summary: Multiple academic scholarships during undergraduate studies.
+
+    Publications:
+      - title: "TODO: replace with exact paper title — EEG-fNIRS Multimodal Decoding (Applied Soft Computing)"
+        authors:
+          - Xiaoqi Luo
+          - TODO co-authors
+        publisher: Applied Soft Computing (Elsevier) — SCI/JCR Q1 TOP, IF≈6.6
+        releaseDate: 2024-09-01
+        url: # TODO: DOI link
+        summary: First-author work on multimodal EEG-fNIRS signal decoding. Replace this entry with the exact title, co-authors, and DOI.
+
+      - title: "TODO: replace with exact paper title — EEG-fNIRS Multimodal Decoding (IEEE Transactions on Affective Computing)"
+        authors:
+          - Xiaoqi Luo
+          - TODO co-authors
+        publisher: IEEE Transactions on Affective Computing — SCI/JCR Q1 TOP, IF≈9.8
+        releaseDate: 2025-01-01
+        url: # TODO: DOI link
+        summary: First-author work on multimodal EEG-fNIRS signal decoding. Replace this entry with the exact title, co-authors, and DOI.
+
+    Skills:
+      - name: Programming & ML
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, PyTorch, NumPy, OpenCV"
+
+      - name: Robotics & VLA
+        level: Advanced
+        icon: fa-solid fa-robot
+        keywords: "ROS2, LeRobot, OpenPI, Rerun, Isaac Lab, MuJoCo, RViz2, LIBERO"
+
+      - name: Data & Systems
+        level: Advanced
+        icon: fa-solid fa-database
+        keywords: "MCAP, WebDataset, Parquet, Docker, FastAPI, Redis, PostgreSQL, Git, CI/CD"
+
+    Languages:
+      - name: Chinese
+        summary: "Native"
+
+      - name: English
+        summary: "Professional working proficiency" # TODO: adjust to your actual level
