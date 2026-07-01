@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://typesh1t.github.io/sitemap.xml
