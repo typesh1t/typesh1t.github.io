@@ -5,7 +5,7 @@ description: 基于 sEEG 的侵入式脑机接口中文语音解码
 img: assets/img/3.jpg # TODO: 替换为 sEEG 信号 / 解码架构示意图
 importance: 3
 category: 研究
-related_publications: true
+related_publications: false
 ---
 
 2025.06 – 2025.09 在**西湖大学 CenBRAIN 实验室**担任**算法工程师实习生**，从事**侵入式脑机接口（iBCI）语音解码**，基于临床 sEEG 信号实现中文句子级输出。

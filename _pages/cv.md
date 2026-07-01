@@ -74,8 +74,8 @@ toc:
 
 ## 论文
 
-- **第一作者**，EEG-fNIRS 多模态解码，*IEEE Transactions on Affective Computing*（SCI/JCR Q1 TOP，IF≈9.8）。[TODO: 标题/DOI]
-- **第一作者**，EEG-fNIRS 多模态解码，*Applied Soft Computing*（SCI/JCR Q1 TOP，IF≈6.6）。[TODO: 标题/DOI]
+- Yunyuan Gao, **Xiaoqi Luo**, Zhengnan Zhang, Jiangwen Lu, Yingchun Zhang, Ruyue Huang. "Neurovascular Alignment and Reliability-Aware Fusion for Continuous EEG–fNIRS Emotion Regression." *IEEE Transactions on Affective Computing*, 2026（SCI/JCR Q1 TOP，IF≈9.8）。框架 **PhysioSync**。
+- Yunyuan Gao, **Xiaoqi Luo**, Zhengnan Zhang, Xu Shao, Yanhua Qin. "Progressive Cross-Modal Attention Network for Brain-Computer Interface Decoding Using EEG and Functional Near-Infrared Spectroscopy (fNIRS)." *Applied Soft Computing*, 2026（SCI/JCR Q1 TOP，IF≈6.6）。[doi:10.1016/j.asoc.2026.115318](https://doi.org/10.1016/j.asoc.2026.115318)。框架 **PCMAN**。
 
 ---
 
