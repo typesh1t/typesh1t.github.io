@@ -22,15 +22,12 @@ related_publications: false
 - **Initial、Tone、Final** 三路并行解码器
 - 通过 **Beam Search**、**pinyin-to-char** 映射与 **LLM 重排序**恢复句子级中文输出
 
-<!-- TODO: 添加解码演示视频或架构讲解视频。
-{% include video.liquid path="assets/video/cenbrain_demo.mp4" controls="true" %} -->
-<div class="row mt-3">
-  <div class="col-sm mt-3 mt-md-0">
-    <div class="ratio ratio-16x9">
-      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+## 演示
+侵入式脑机接口语音解码演示。
+
+<div class="row justify-content-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/cenbrain_ibci.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
   </div>
 </div>
-<div class="caption">
-  TODO：替换为 iBCI 语音解码演示视频或模型架构视频。
-</div>
+<div class="caption">西湖大学 CenBRAIN 实验室 · 侵入式脑机接口语音解码演示。</div>
