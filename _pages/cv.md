@@ -27,7 +27,7 @@ toc:
 自动化（人工智能）学院 · 控制工程 ｜ **GPA 3.7/4.0**
 
 - 研究方向：多模态时序信号建模与解码。
-- 作为第二作者（学生作者）在 *Applied Soft Computing*（SCI/JCR Q1 TOP，IF≈6.6）发表 EEG-fNIRS 多模态解码论文一篇；另有一篇投稿 *IEEE Transactions on Affective Computing*（SCI/JCR Q1 TOP），大修已返修（在审）。
+- 作为第二作者（学生作者）在 *Applied Soft Computing*（SCI/JCR Q1 TOP，IF≈6.6）发表 EEG-fNIRS 多模态解码论文一篇；另有两篇在审：*IEEE Transactions on Affective Computing*（大修已返修）与 *IEEE Journal of Biomedical and Health Informatics*（初审中）。
 
 ### 华东交通大学 — 工学学士 ｜ 2020.09 – 2024.06
 电气与自动化工程学院 · 自动化 ｜ **GPA 4.0/5.0（专业前 30%）**
@@ -72,6 +72,7 @@ toc:
 
 - Yunyuan Gao, **Xiaoqi Luo（第二作者）**, Zhengnan Zhang, Xu Shao, Yanhua Qin. "Progressive Cross-Modal Attention Network for Brain–Computer Interface Decoding Using EEG and fNIRS." *Applied Soft Computing*, **199C (2026) 115318**（SCI/JCR Q1 TOP，IF≈6.6）。2026-04-24 接收，2026-06-05 online。[doi:10.1016/j.asoc.2026.115318](https://doi.org/10.1016/j.asoc.2026.115318)。框架 **PCMAN**。
 - Yunyuan Gao, **Xiaoqi Luo（第二作者）**, Zhengnan Zhang, Jiangwen Lu, Yingchun Zhang, Ruyue Huang. "Neurovascular Alignment and Reliability-Aware Fusion for Continuous EEG–fNIRS Emotion Regression." *IEEE Transactions on Affective Computing*（**大修已返修 / Under Review, R1**）。框架 **PhysioSync**。
+- Jiangwen Lu, **Xiaoqi Luo（第二作者）**, Weixiang Gao, Ruyue Huang, Yunyuan Gao. "Neuro-SSCL: A Neuro-Aware Semi-Supervised Contrastive Learning for Cross-Subject EEG Emotion Recognition." *IEEE Journal of Biomedical and Health Informatics*（**在审 / Under Review**）。框架 **Neuro-SSCL**。
 
 ---
 
