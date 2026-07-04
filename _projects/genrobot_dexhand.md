@@ -13,6 +13,13 @@ related_publications: false
 ## Dex 外骨骼遥操作 Retarget
 基于 **DexPilot** 算法改进实时 retarget 框架：在机器人手可执行约束下，自适应选择**整体手型、指尖相对关系、指尖方向、掌心姿态、关节正则与速度平滑**等关键目标，实现 **Dex 外骨骼 / 动捕 / 视觉输入 → Wuji Hand2 20-DoF 关节轨迹**的稳定映射。
 
+<div class="row justify-content-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/genrobot_dex_retarget.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+  </div>
+</div>
+<div class="caption">Dex 外骨骼遥操作 Retarget 实机演示。</div>
+
 ## 接触 Retarget + RL Sim-to-Real
 针对**转笔**等存在物体接触的手内操作任务：
 
