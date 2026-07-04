@@ -68,16 +68,6 @@ toc:
 
 ---
 
-## 项目经历
-
-### 宁波博汇化工科技股份有限公司 — 原油市场数据与智能投研平台 ｜ 2025.10 – 2026.04
-后端开发。
-
-- 使用 Codex 与 Claude Code 设计 AI 量化策略工作台，构建策略因子 Workflow 与 DAG 可视化编排，接入交易所实时行情，搭建 CTP→Kafka→ClickHouse 低延迟流式链路。
-- 建设多资产行情与回测数据链路，接入 FMP、TradingView、PostgreSQL hot DB、OSS 历史归档与实时指标服务，覆盖期货、美股、A股；设计主站+Mac worker+OSS 架构，将计算任务从主链路解耦。
-
----
-
 ## 论文
 
 - Yunyuan Gao, **Xiaoqi Luo**, Zhengnan Zhang, Jiangwen Lu, Yingchun Zhang, Ruyue Huang. "Neurovascular Alignment and Reliability-Aware Fusion for Continuous EEG–fNIRS Emotion Regression." *IEEE Transactions on Affective Computing*, 2026（SCI/JCR Q1 TOP，IF≈9.8）。框架 **PhysioSync**。
