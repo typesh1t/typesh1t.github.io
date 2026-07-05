@@ -44,6 +44,9 @@ toc:
 - **Dex 外骨骼遥操作 Retarget**：基于 DexPilot 算法改进实时 retarget 框架，在机器人手可执行约束下自适应选择整体手型、指尖相对关系、指尖方向、掌心姿态、关节正则与速度平滑等关键目标，实现 Dex 外骨骼 / 动捕 / 视觉输入到 Wuji Hand2 20-DoF 关节轨迹的稳定映射。
 - **接触 Retarget + RL Sim-to-Real**：针对转笔等存在物体接触的手内操作任务，保持人手-物体的任务相关接触拓扑，生成带物体位姿与手部 21 keypoint 的 reference 轨迹；在 Isaac Lab 中通过 reference-state initialization、residual joint-position action 与 PPO 训练 tracking policy，最终迁移到真机完成转笔任务。
 
+### 宇树科技 — 算法实习生 ｜ 2026.06（约一周）
+基于 **G1 人形机器人**的 **loco-manipulation**（移动-操作一体）开展**人在环强化学习（HIL-RL）**：协同下半身运动控制与上半身抓取，通过人在环迭代提升策略在真机上的稳定性与任务成功率。
+
 ### 普渡机器人 — VLA 算法实习生 ｜ 2026.03 – 2026.06
 为自研轮式双臂机器人开展视觉-语言-动作基座模型的复现、适配、评测、推理加速与强化学习后训练。
 
