@@ -26,3 +26,56 @@ related_publications: false
 
 ## RL 后训练
 在 FlowerVLA SFT 权重后接 **ConRFT** 强化学习微调，设计人在环路流程（**SFT → 离线 RL → 在线 RL**），结合 BC 与 Q-learning 双重 loss、人类干预与稀疏奖励，构建 reward model 与真机 rollout 评测闭环，显著提升抓取/推动任务成功率与错误恢复能力。
+
+## HIL-SERL 真机强化学习复现（Franka 圆柱抓取-插孔）
+复现 **HIL-SERL**（Human-in-the-Loop 样本高效强化学习）框架，在 **Franka** 机械臂上完成圆柱**抓取-插孔**任务的真机人在环训练：
+
+- **圆柱插孔成功率 97/106（≈90%+）**，单任务训练总耗时约 2.5–3 h（60k+ 步）。
+- 系统研究 **critic/actor 更新频率**、**人工干预时机与强度**对 Q 值收敛、熵坍塌与泛化的影响；发现"前期多给成功干预、正确引导 critic"是稳定收敛的关键。
+- 关键结论：**人在环干预能有效提升成功率**——对未见情形只需多示教几次即可转为无需干预；**模型具备从失败中学习、二次尝试自主纠正**的能力。
+
+<div class="row justify-content-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/hilserl_insertion_demo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+  </div>
+</div>
+<div class="caption">Franka 圆柱抓取-插孔 · HIL-SERL 真机演示（成功率 97/106，≈90%+）。</div>
+
+### 泛化性对比实验
+在其它孔位塞入圆柱/连接件、封孔、更换背景等干扰下测试策略泛化性：
+
+<div class="row mt-2">
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_2holes.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>间隔两孔插入干扰柱 · ✅ 100%</small></p>
+  </div>
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_thirdhole.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>封住第三孔 · ✅ 100%</small></p>
+  </div>
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_horiz.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>隔壁槽横卡连接件 · ✅ 100%</small></p>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_adjacent.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>目标隔壁孔放圆柱 · ❌ 0%</small></p>
+  </div>
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_two_cyl.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>同时放绿、黄两柱 · ❌ 0%</small></p>
+  </div>
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_vert.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>隔壁槽竖卡连接件 · ❌ 0%</small></p>
+  </div>
+</div>
+<div class="row justify-content-center mt-2">
+  <div class="col-md-4 mt-3">
+    {% include video.liquid path="assets/video/hilserl_gen_bg.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    <p class="text-center mt-1"><small>更换工作台背景 · ❌ 0%</small></p>
+  </div>
+</div>
+<div class="caption">结论：仅当"第一个孔"（疑似被作为目标参考物）被干扰、或工作台背景改变时成功率显著下降；其余干扰下策略保持稳健。</div>
