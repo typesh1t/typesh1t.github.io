@@ -3,7 +3,7 @@ layout: page
 title: 普渡机器人 — VLA 基座模型
 description: 模型复现与本体适配、评测、推理加速与强化学习后训练
 img: assets/img/logo_pudu.png
-importance: 1
+importance: 3
 category: 工作
 related_publications: false
 ---
@@ -26,13 +26,3 @@ related_publications: false
 
 ## RL 后训练
 在 FlowerVLA SFT 权重后接 **ConRFT** 强化学习微调，设计人在环路流程（**SFT → 离线 RL → 在线 RL**），结合 BC 与 Q-learning 双重 loss、人类干预与稀疏奖励，构建 reward model 与真机 rollout 评测闭环，显著提升抓取/推动任务成功率与错误恢复能力。
-
-## 演示：宇树 G1（基于 GR00T）
-在宇树 G1 人形机器人上基于 GR00T 进行策略推理的实机演示。
-
-<div class="row justify-content-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include video.liquid path="assets/video/pudu_g1_groot.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
-  </div>
-</div>
-<div class="caption">宇树 G1 · 基于 GR00T 的策略推理实机演示。</div>

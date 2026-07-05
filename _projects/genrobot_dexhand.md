@@ -3,7 +3,7 @@ layout: page
 title: 简智新创（Genrobot.ai）— 灵巧手算法
 description: Dex 外骨骼遥操作 Retarget 与接触式手内操作的 RL Sim-to-Real
 img: assets/img/logo_genrobot.png
-importance: 0
+importance: 1
 category: 工作
 related_publications: false
 ---
