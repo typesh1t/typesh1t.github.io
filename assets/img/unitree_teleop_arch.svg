@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 720" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',system-ui,-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowFb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#0e7490"/>
+    </marker>
+    <style>
+      .title{font-size:26px;font-weight:700;fill:#0f172a}
+      .lane{font-size:15px;font-weight:700;fill:#64748b;letter-spacing:1px}
+      .bt{font-size:17px;font-weight:700}
+      .bs{font-size:13px;fill:#475569}
+      .edge{font-size:12.5px;fill:#64748b}
+      .fb{font-size:12.5px;fill:#0e7490;font-weight:600}
+    </style>
+  </defs>
+
+  <text x="40" y="46" class="title">G1 全身遥操作数据采集系统 · 架构</text>
+
+  <text x="40" y="92" class="lane">遥操作控制回路 · Teleoperation Control Loop</text>
+
+  <rect x="40" y="108" width="205" height="96" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.6"/>
+  <text x="142" y="146" text-anchor="middle" class="bt" fill="#1d4ed8">操作者 · XR / PICO</text>
+  <text x="142" y="170" text-anchor="middle" class="bs">头显 + 双手柄</text>
+  <text x="142" y="189" text-anchor="middle" class="bs">3-point pose</text>
+
+  <rect x="300" y="108" width="205" height="96" rx="12" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.6"/>
+  <text x="402" y="146" text-anchor="middle" class="bt" fill="#0e7490">三点位姿到 SMPL</text>
+  <text x="402" y="170" text-anchor="middle" class="bs">人体关节估计</text>
+  <text x="402" y="189" text-anchor="middle" class="bs">human joints</text>
+
+  <rect x="560" y="108" width="205" height="96" rx="12" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.6"/>
+  <text x="662" y="146" text-anchor="middle" class="bt" fill="#0e7490">Retarget</text>
+  <text x="662" y="170" text-anchor="middle" class="bs">映射到 G1 全身</text>
+  <text x="662" y="189" text-anchor="middle" class="bs">上肢末端 + 朝向</text>
+
+  <rect x="820" y="108" width="215" height="96" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="1.6"/>
+  <text x="927" y="142" text-anchor="middle" class="bt" fill="#c2410c">全身控制 WBC</text>
+  <text x="927" y="165" text-anchor="middle" class="bs">LocoClient · FSM（遥操/行走）</text>
+  <text x="927" y="184" text-anchor="middle" class="bs">末端位姿 · yaw 连续化</text>
+
+  <rect x="1055" y="108" width="130" height="96" rx="12" fill="#0f172a" stroke="#0f172a"/>
+  <text x="1120" y="142" text-anchor="middle" class="bt" fill="#ffffff">G1 人形</text>
+  <text x="1120" y="166" text-anchor="middle" class="bs" fill="#cbd5e1">+ Inspire</text>
+  <text x="1120" y="185" text-anchor="middle" class="bs" fill="#cbd5e1">双手灵巧手</text>
+
+  <line x1="245" y1="156" x2="298" y2="156" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="505" y1="156" x2="558" y2="156" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="765" y1="156" x2="818" y2="156" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="1035" y1="156" x2="1053" y2="156" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <path d="M1120,204 L1120,244 L927,244 L927,206" fill="none" stroke="#0e7490" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrowFb)"/>
+  <text x="1024" y="238" text-anchor="middle" class="fb">低层状态反馈：29 关节 + IMU（rt/lowstate）</text>
+
+  <text x="40" y="330" class="lane">多模态数据录制 · Data Recording</text>
+
+  <rect x="40" y="348" width="235" height="104" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.6"/>
+  <text x="157" y="384" text-anchor="middle" class="bt" fill="#15803d">多相机图像服务</text>
+  <text x="157" y="408" text-anchor="middle" class="bs">多路相机采集 + 时间对齐</text>
+  <text x="157" y="428" text-anchor="middle" class="bs">+ 机器人状态（关节 / IMU）</text>
+
+  <rect x="330" y="348" width="270" height="104" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.6"/>
+  <text x="465" y="380" text-anchor="middle" class="bt" fill="#15803d">MCAP 录制 · 30 Hz 状态机</text>
+  <text x="465" y="404" text-anchor="middle" class="bs">生命周期 · 坐标系变换</text>
+  <text x="465" y="424" text-anchor="middle" class="bs">异步写入线程 · 暂停 / 恢复</text>
+
+  <rect x="655" y="348" width="205" height="104" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="1.6"/>
+  <text x="757" y="388" text-anchor="middle" class="bt" fill="#4338ca">MCAP Episodes</text>
+  <text x="757" y="412" text-anchor="middle" class="bs">人在环采集数据</text>
+
+  <rect x="915" y="348" width="205" height="104" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="1.6"/>
+  <text x="1017" y="388" text-anchor="middle" class="bt" fill="#4338ca">meshcat 回放</text>
+  <text x="1017" y="412" text-anchor="middle" class="bs">轨迹复核 / 质检</text>
+
+  <line x1="275" y1="400" x2="328" y2="400" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="600" y1="400" x2="653" y2="400" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="860" y1="400" x2="913" y2="400" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <path d="M1120,204 L1120,300 L157,300 L157,346" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <text x="640" y="292" text-anchor="middle" class="edge">图像 + 机器人状态 到 录制</text>
+
+  <rect x="40" y="520" width="1080" height="150" rx="14" fill="#fafafa" stroke="#e2e8f0" stroke-width="1.4"/>
+  <text x="62" y="556" class="bt" fill="#0f172a">下游算法：人在环强化学习（HIL-RL）后训练</text>
+  <text x="62" y="588" class="bs">1. 自主 rollout；接近失败时操作者经上方系统「全身 + 灵巧手」接管纠正。</text>
+  <text x="62" y="614" class="bs">2. 轨迹按 rollout / 纠正（adaptation）/ 恢复（recovery）分阶段打标，保守设置失败边界。</text>
+  <text x="62" y="640" class="bs">3. 以价值 / 优势（advantage）估计筛选高价值行为，聚焦高价值动作而非无差别模仿接管数据。</text>
+
+  <path d="M757,452 L757,486 L580,486 L580,518" fill="none" stroke="#6366f1" stroke-width="1.6" marker-end="url(#arrow)"/>
+</svg>

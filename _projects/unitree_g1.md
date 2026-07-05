@@ -27,6 +27,13 @@ related_publications: false
 - **MCAP 录制**：30 Hz 录制状态机（生命周期管理、坐标系变换、异步写入线程、暂停 / 恢复），产出 MCAP 轨迹并支持 meshcat 回放复核。
 
 <div class="row justify-content-center">
+  <div class="col-sm-12 mt-3 mt-md-0">
+    <img src="{{ '/assets/img/unitree_teleop_arch.svg' | relative_url }}" class="img-fluid rounded z-depth-1" alt="G1 全身遥操作数据采集系统架构" />
+  </div>
+</div>
+<div class="caption">系统架构：XR/PICO 遥操 → SMPL 映射 → WBC 控制 → G1（低层状态反馈）；多相机与机器人状态经 30 Hz MCAP 录制，服务下游 HIL-RL 后训练。</div>
+
+<div class="row justify-content-center">
   <div class="col-sm-10 mt-3 mt-md-0">
     {% include video.liquid path="assets/video/unitree_g1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
   </div>
