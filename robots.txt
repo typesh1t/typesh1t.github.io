@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://typesh1t.github.io/sitemap.xml
+Sitemap: https://xiaoqi-luo.github.io/sitemap.xml
