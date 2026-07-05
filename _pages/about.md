@@ -27,10 +27,10 @@ latest_posts:
   limit: 3
 ---
 
-我是**杭州电子科技大学自动化（人工智能）学院控制工程专业**的硕士研究生，研究方向为多模态时序信号建模与解码，聚焦 **EEG-fNIRS 多模态脑信号解码**。作为**学生作者**参与多篇 EEG 解码相关论文：在 SCI Q1 TOP 期刊 *Applied Soft Computing*（IF≈6.6，第二作者（导师一作））发表一篇；另有三篇在审——*IEEE Transactions on Affective Computing*（第二作者（导师一作），大修已返修）、*IEEE Journal of Biomedical and Health Informatics*（第二作者，初审中）与 *IEEE Transactions on Emerging Topics in Computational Intelligence*（第三作者，初审中）。
+我是**杭州电子科技大学自动化（人工智能）学院控制工程专业**的硕士研究生，研究方向为多模态时序信号建模与解码。作为**学生作者**参与多篇 EEG 解码相关论文：在 SCI TOP 期刊 *Applied Soft Computing*（第二作者（导师一作））发表一篇；另有三篇在审——*IEEE Transactions on Affective Computing*（第二作者（导师一作），大修已返修）、*IEEE Journal of Biomedical and Health Informatics*（第二作者，初审中）与 *IEEE Transactions on Emerging Topics in Computational Intelligence*（第三作者，初审中）。
 
-在神经科学之外，我也从事**具身智能与视觉-语言-动作（VLA）模型**研究：曾在**普渡机器人**实习（VLA 基座模型复现、本体适配、推理加速与 ConRFT 强化学习后训练），**安克创新**实习（InternVLA-N1 在 Unitree Go2 上的部署、四足多模态数据产线、遥操作数据采集与 VLM 自动标注），以及**西湖大学 CenBRAIN 实验室**实习（侵入式脑机接口的 sEEG 语音解码）。
+除此之外，我主要从事**具身智能**方向的研究：曾在**简智新创**实习，担任灵巧手算法实习生（Dex 外骨骼摇操作 Retarget，密集接触任务 Retarget + RL Sim-to-Real）；**宇树科技**实习，担任算法实习生（基于 G1 人形的 loco-manipulation 的 HIL-RL）；**普渡机器人**实习（VLA 基座模型复现、自研本体适配、推理加速与人在环的机械臂真机强化学习后训练 RFT）；**安克创新**实习（模型部署、四足多模态数据产线、遥操作数据采集与 VLM 自动标注产线）；以及**西湖大学 CenBRAIN 实验室**实习（侵入式脑机接口的 sEEG 语音解码）。
 
-我关注如何打通感知、语言与行动的闭环——构建能够"看见、理解并在物理世界中行动"的机器人与神经接口。
+我关注如何打通感知、语言与行动的闭环——构建能够“看见、理解并在物理世界中行动”的机器人与神经接口。
 
-我**正在积极寻找 2027 年秋季入学的博士机会**，以及具身智能、多模态学习与脑机接口方向的**全职研究岗位**。欢迎通过邮件联系，可在此下载我的 [简历（PDF）](/assets/pdf/cv_xiaoqi_luo.pdf)。
+我**正在积极寻找 2027 年秋季入学的博士机会**，可在此下载我的 [简历（PDF）](/assets/pdf/cv_xiaoqi_luo.pdf)。
