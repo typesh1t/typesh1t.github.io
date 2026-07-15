@@ -67,6 +67,19 @@ related_publications: false
 - 在 **Isaac Lab** 中通过 **reference-state initialization**、**residual joint-position action** 与 **PPO** 训练 tracking policy；
 - 最终迁移到**真机**完成转笔任务。
 
+### Revo3 右手 · HORA 转球（Sim-to-Real）
+基于 **HORA**（Stage1 PPO + Stage2 ProprioAdapt）在 **Revo3 右手**上完成转球任务的仿真训练与真机迁移。
+
+<div class="row justify-content-center">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/genrobot_hora_revo3_sim.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include video.liquid path="assets/video/genrobot_hora_revo3_real.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+  </div>
+</div>
+<div class="caption">左：Isaac 仿真中的 HORA 转球策略；右：Revo3 右手真机 Sim-to-Real 演示。</div>
+
 ## 演示：基于 pi0.5 的 SFT 策略
 基于 **pi0.5** 进行监督微调（SFT）的策略实机演示。
 
